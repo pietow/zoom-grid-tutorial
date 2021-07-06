@@ -1,0 +1,162 @@
+/*global box-sizing fix*/
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: darkslategray;
+    position: relative;
+}
+
+
+/*default margins are removed*/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+    margin: 0;
+}
+
+/*headings are unstyled*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*prevent image from overflowing the container*/
+img {
+    max-width: 100%;
+}
+
+
+/***default btn*******/
+.btn {
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    background: #0f9;
+    color: #444;
+    font-weight: 600;
+    text-decoration: none;
+    align-self: center;
+}
+
+/********CARD BOX********/
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    position: relative;
+}
+.card-footer {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    display:flex;
+    justify-content: space-between;
+}
+
+/*******CSS RESET / DEFAULT END******/
+
+/*double container to center page content*/
+
+.main {
+    display: grid;
+    width: 85%;
+    margin: 8rem auto;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-gap: 1.6rem;
+}
+
+img {
+    height: 17em;
+    border-radius: 1.2rem;
+    object-fit: cover;
+    object-position:center;
+}
+
+.card-footer > p {
+    color: rgb(255,255, 255, .6);
+    background-color: rgb(128,128,128, .5);
+    padding: .55em;
+    font-size: 2em;
+}
+
+.card-footer > i {
+    align-self: center;
+    color: green;
+    font-size: 4em;
+}
+
+header {
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5em;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top:0;
+    z-index:1;
+}
+
+header span {
+    text-transform: none;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    height: 6em;
+    color: white;
+    padding: 1em 8vw;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+
+.control > * {
+    flex: 1;
+    text-align: center;
+}
+
+.control > .card > i {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    padding-bottom: .2em;
+}
+
+.btn {
+    margin-top: .6em;
+}
